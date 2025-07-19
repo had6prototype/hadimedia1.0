@@ -40,15 +40,7 @@ export async function POST(request: NextRequest) {
     console.log(`API: File type: ${fileType}`)
     console.log(`API: File size: ${fileSize} bytes (${(fileSize / 1024 / 1024).toFixed(2)} MB)`)
 
-    // Check file size limits
     const isVideo = fileType.startsWith("video/")
-    const maxSize = isVideo ? 50 * 1024 * 1024 : 5 * 1024 * 1024 // 50MB for video, 5MB for images
-
-    if (fileSize > maxSize) {
-      const maxSizeMB = maxSize / (1024 * 1024)
-      console.log(`API: File too large: ${fileSize} > ${maxSize}`)
-      return NextResponse.json({ error: `File size too large. Maximum allowed: ${maxSizeMB}MB` }, { status: 400 })
-    }
 
     // Generate a unique file name to prevent collisions
     const uniqueFileName = generateUniqueFileName(fileName)

@@ -20,11 +20,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "No file provided" })
     }
 
-    // Updated to 50MB limit
-    if (file.size > 50 * 1024 * 1024) {
-      return NextResponse.json({ success: false, error: "File too large (max 50MB)" })
-    }
-
     // Generate unique filename
     const timestamp = Date.now()
     const randomId = Math.random().toString(36).substring(2, 8)

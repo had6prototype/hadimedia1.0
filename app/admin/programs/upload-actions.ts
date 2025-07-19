@@ -34,14 +34,7 @@ export async function uploadFile(formData: FormData) {
 
     console.log(`Starting upload: ${fileName}, type: ${fileType}, size: ${fileSize} bytes`)
 
-    // Check file size limits
     const isVideo = fileType.startsWith("video/")
-    const maxSize = isVideo ? 50 * 1024 * 1024 : 5 * 1024 * 1024 // 50MB for video, 5MB for images
-
-    if (fileSize > maxSize) {
-      const maxSizeMB = maxSize / (1024 * 1024)
-      return { error: `File size too large. Maximum allowed: ${maxSizeMB}MB` }
-    }
 
     // Generate a unique file name to prevent collisions
     const uniqueFileName = generateUniqueFileName(fileName)

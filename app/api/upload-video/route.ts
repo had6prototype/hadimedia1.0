@@ -19,10 +19,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "File must be a video" })
     }
 
-    if (file.size > 50 * 1024 * 1024) {
-      return NextResponse.json({ success: false, error: "File too large (max 50MB)" })
-    }
-
     // Use original filename with timestamp prefix to avoid conflicts
     const timestamp = Date.now()
     const originalName = file.name
