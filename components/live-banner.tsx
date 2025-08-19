@@ -20,7 +20,7 @@ export default function LiveBanner() {
   // Updated stream URLs with the new primary URL
   const streamUrls = [
     "https://672a3a5c8e335.streamlock.net:443/alhadi/smil:alhadimedia.smil/playlist.m3u8",
-    "https://g.decdn.net/haditv.co.uk/haditv6.m3u8", // Fallback
+    "https://672a3a5c8e335.streamlock.net:443/alhadi/smil:alhadimedia.smil/playlist.m3u8", // Fallback
   ]
 
   const [currentStreamIndex, setCurrentStreamIndex] = useState(0)
