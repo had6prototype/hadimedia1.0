@@ -19,8 +19,8 @@ export default function LiveBanner() {
 
   // Updated stream URLs with the new primary URL
   const streamUrls = [
-    "http://209.127.202.247:1935/alhadi/definst/alhadimedia/playlist.m3u8",
-    "http://209.127.202.247:1935/alhadi/definst/alhadimedia/playlist.m3u8", // Fallback
+    "http://209.127.202.247:1935/alhadi/_definst_/alhadimedia/playlist.m3u8",
+    "http://209.127.202.247:1935/alhadi/_definst_/alhadimedia/playlist.m3u8", // Fallback
   ]
 
   const [currentStreamIndex, setCurrentStreamIndex] = useState(0)
