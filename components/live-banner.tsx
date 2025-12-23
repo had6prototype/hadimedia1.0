@@ -19,8 +19,8 @@ export default function LiveBanner() {
 
   // Updated stream URLs with the new primary URL
   const streamUrls = [
-    "https://zeuscdn724.com/alhadi/video.m3u8",
-    "https://zeuscdn724.com/alhadi/video.m3u8", // Fallback
+    "https://zeuscdn724.com/lb0/alhadi/index.m3u8",
+    "https://zeuscdn724.com/lb0/alhadi/index.m3u8", // Fallback
   ]
 
   const [currentStreamIndex, setCurrentStreamIndex] = useState(0)
